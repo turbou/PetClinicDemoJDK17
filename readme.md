@@ -6,7 +6,7 @@ java, javacともに17となるようにJavaのセットアップ、JAVA_HOMEの
 
 ### WARの生成
 ```bash
-./mvnw -DskipTests
+./mvnw -DskipTests -Dcheckstyle.skip clean package
 ```
 target/petclinic.war が出来上がります。
 
