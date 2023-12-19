@@ -18,6 +18,8 @@ package org.springframework.samples.petclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.ImportRuntimeHints;
 
 /**
@@ -28,10 +30,22 @@ import org.springframework.context.annotation.ImportRuntimeHints;
  */
 @SpringBootApplication
 @ImportRuntimeHints(PetClinicRuntimeHints.class)
-public class PetClinicApplication {
+public class PetClinicApplication extends SpringBootServletInitializer {
+
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+		return customizerBuilder(builder);
+	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(PetClinicApplication.class, args);
+		customizerBuilder(new SpringApplicationBuilder()).run(args);
 	}
+
+	private static SpringApplicationBuilder customizerBuilder(SpringApplicationBuilder builder) {
+		return builder.sources(PetClinicApplication.class);
+	}
+	// public static void main(String[] args) {
+	// SpringApplication.run(PetClinicApplication.class, args);
+	// }
 
 }
