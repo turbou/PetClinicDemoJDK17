@@ -1,6 +1,9 @@
 # PetClinicのJDK17版です。
 java1７環境へのデプロイ用です。まだ脆弱性は仕込んでいません。
 
+### 前提条件
+java, javacともに17となるようにJavaのセットアップ、JAVA_HOMEの環境変数のセットをしておいてください。  
+
 ### WARの生成
 ```bash
 ./mvnw -DskipTests
