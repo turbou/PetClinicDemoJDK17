@@ -16,6 +16,8 @@ docker run -it --rm -p 8888:8080 \
 -v /root/git/PetClinicDemoJDK17/target/petclinic.war:/usr/local/tomcat/webapps/petclinic.war \
 -v /root/contrast.jar:/root/contrast.jar \
 -e CATALINA_OPTS="$CATALINA_OPTS -javaagent:/root/contrast.jar" \
+-e CONTRAST__SERVER__NAME="Tomcat10-JDK17" \
+-e CONTRAST__APPLICATION__NAME="PetClinic on Tomcat10" \
 tomcat:10.1.17-jre17-temurin
 ```
 http://xxx.xxx.xxx.xxx:8888/petclinic  
