@@ -14,7 +14,7 @@ target/petclinic.war が出来上がります。
 ### WARをDockerのTomcat10にデプロイ
 Contrastエージェント付きで起動するコマンドです。  
 認証情報つきのcontrast.jarをDLしておいてください。  
-※適宜、contrast.jarやpetclinic.warのパスは変更してください。  
+**適宜、contrast.jarやpetclinic.warのパスは変更してください。**  
 ```bash
 docker run -it --rm -p 8081:8080 \
 -v $PWD/target/petclinic.war:/usr/local/tomcat/webapps/petclinic.war \
