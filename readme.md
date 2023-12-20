@@ -5,6 +5,7 @@ java17環境へのデプロイ用です。まだ脆弱性は仕込んでいま�
 java, javacともに17となるようにJavaのセットアップ、JAVA_HOMEの環境変数のセットをしておいてください。  
 
 ### WARの生成
+すぐに使いたい方は [Release](https://github.com/turbou/PetClinicDemoJDK17/releases/latest) ページからビルド済みのwarをダウンロードできます。
 ```bash
 ./mvnw -DskipTests -Dcheckstyle.skip clean package
 ```
